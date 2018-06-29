@@ -39,10 +39,7 @@ func deleteMovie(cfg aws.Config, volumeId string) error {
 		VolumeId: &volumeId,
 	})
 	_, err := req.Send()
-	if err != nil {
-		return err
-	}
-	return nil
+	return err
 }
 
 func handler() error {
